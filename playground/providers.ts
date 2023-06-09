@@ -16,7 +16,7 @@ export const providers: Provider[] = [
     name: 'ipx',
     samples: [
       {
-        src: '/images/colors.jpg',
+        src: '/images/invalid-sos.jpeg',
         from: 'Jeremy Thomas',
         width: 300,
         height: 300,

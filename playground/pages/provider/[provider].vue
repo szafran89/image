@@ -2,10 +2,10 @@
   <div>
     <div v-if="provider">
       <h1>{{ provider.name }}</h1>
-      <br>
+      <br />
       <div class="providerShowcase">
         <div v-for="sample of provider.samples" :key="sample.src">
-          <nuxt-img :provider="provider.name" v-bind="sample" />
+          <nuxt-img provider="ipx" v-bind="sample" />
           <pre>{{ sample }}</pre>
         </div>
       </div>
@@ -14,24 +14,24 @@
 </template>
 
 <script lang="ts">
-import { providers } from '../../providers'
+import { providers } from "../../providers";
 
 export default {
-  validate ({ params }) {
-    return Boolean(providers.find(p => p.name === params.provider))
+  validate({ params }) {
+    return Boolean(providers.find((p) => p.name === params.provider));
   },
   computed: {
     providers: () => providers,
-    provider () {
-      const providerName = this.$route.params.provider || 'default'
-      const p = providers.find(p => p.name === providerName)
+    provider() {
+      const providerName = this.$route.params.provider || "default";
+      const p = providers.find((p) => p.name === providerName);
       if (!p) {
-        return null
+        return null;
       }
-      return p
-    }
-  }
-}
+      return p;
+    },
+  },
+};
 </script>
 
 <style scoped>
