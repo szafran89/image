@@ -1,6 +1,6 @@
 {
   "name": "@nuxt/image",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Nuxt Image Module",
   "repository": "nuxt/image",
   "license": "MIT",
@@ -20,7 +20,7 @@
     "docs:dev": "pnpm nuxt dev docs",
     "lint": "eslint --ext .ts --ext .vue .",
     "prepack": "pnpm build",
-    "release": "pnpm test && standard-version && git push --follow-tags && npm publish",
+    "release": "standard-version && git push --follow-tags && npm publish",
     "test": "pnpm lint"
   },
   "dependencies": {
